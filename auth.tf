@@ -17,6 +17,11 @@ resource "google_identity_platform_config" "default" {
       enabled           = true
       password_required = true
     }
+
+    # API側が既定で返すため、明示しないと毎回差分が出る
+    phone_number {
+      enabled = false
+    }
   }
 
   depends_on = [google_firebase_project.default]
