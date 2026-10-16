@@ -57,11 +57,3 @@ terraform output firebase_web_config
 
 - `rules/` のルールは旧プロジェクト（`bandbrother2-2764c`）から移したもので、**誰でも読み書きできる**設定になっている。要見直し。
 - Firestore のロケーションは作成後に変更できない。
-
-## 独自ドメイン (bandbrother2.uomi.dev)
-
-`uomi.dev` は Cloudflare で管理している。Cloud Run は Host ヘッダでサービスを判別するため単純な CNAME では届かないので、
-Cloudflare Worker `bandbrother2-frontend-proxy` を `bandbrother2.uomi.dev` の Custom Domain に設定し、
-`frontend-ugx7tb3anq-an.a.run.app` に中継している（Cloudflare 側は Terraform 管理外）。
-
-Worker の中身はホスト名を書き換えて `fetch` し直すだけ。Cloud Run の URL が変わったら Worker の `ORIGIN` も直すこと。
