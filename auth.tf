@@ -8,6 +8,7 @@ resource "google_identity_platform_config" "default" {
     "${var.project_id}.firebaseapp.com",
     "${var.project_id}.web.app",
     trimprefix(google_cloud_run_v2_service.frontend.uri, "https://"),
+    var.custom_domain,
   ]
 
   sign_in {

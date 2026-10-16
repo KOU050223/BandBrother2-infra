@@ -19,6 +19,12 @@ variable "firestore_location" {
   default     = "asia-northeast1"
 }
 
+variable "custom_domain" {
+  description = "フロントの独自ドメイン（Cloudflare Worker で Cloud Run に中継している）"
+  type        = string
+  default     = "bandbrother2.uomi.dev"
+}
+
 variable "environment" {
   description = "Environment (production, staging, development)"
   type        = string
