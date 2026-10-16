@@ -1,0 +1,10 @@
+project_id = "bandbrother2"
+region     = "asia-northeast1"
+
+# BandBrother2-Backend/rails-server/config/master.key の中身
+rails_master_key = ""
+
+# Firebase Auth の GitHub ログイン（空ならGitHubログインは作らない）
+# GitHub の OAuth App の callback URL は https://bandbrother2.firebaseapp.com/__/auth/handler
+github_oauth_client_id     = ""
+github_oauth_client_secret = ""

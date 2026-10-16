@@ -1,0 +1,16 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfplan
+
+# 機密値
+terraform.tfvars
+*.auto.tfvars
+
+# Service Accountキー
+*.json
+
+.DS_Store
